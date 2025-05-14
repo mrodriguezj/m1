@@ -9,10 +9,29 @@ m1
 │
 ├─── composer.json
 ├─── composer.lock
-└─── README.md
-
-
-
+├─── README.md
+├─── index.html #Punto de entrada del sistema
+│
+├─── front #Archivos visuales del cliente
+│     ├─── js #archivos JavaScript
+│     └─── css #archivos de estilos
+│
+├─── autentificacion #Modulos para autenticación y seguridad
+│     ├─── verificar_token.php
+│     ├─── generar_token.php
+│     ├─── generar_otp.php
+│     └─── verificar_otp.php
+│
+├─── comprobantes #Generacion y validacion de comprobantes
+│     ├─── generar_provisional.php
+│     ├─── enviar_comprobante.php
+│     ├─── validar_pago.php
+│     └─── plantilla.html
+│
+└─── utilidades #Funciones auxiliares reutilizables
+      ├─── generar_qr.php
+      ├─── pdf_generator.php
+      └─── logger.php
 
 └
 │
