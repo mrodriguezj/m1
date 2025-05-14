@@ -1,0 +1,8 @@
+{
+    "require": {
+        "firebase/php-jwt": "^6.11",
+        "spomky-labs/otphp": "^11.3",
+        "endroid/qr-code": "^5.1",
+        "dompdf/dompdf": "^3.1"
+    }
+}
