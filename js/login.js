@@ -39,8 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error(data.error || "Error desconocido");
       }
 
-      localStorage.setItem("authToken", data.token);
-      localStorage.setItem("authTokenExp", Date.now() + 10 * 60 * 1000); // 10 minutos
+      localStorage.setItem("token", data.token); // <-- antes: authToken
+      //localStorage.setItem("authToken", data.token);
+      //localStorage.setItem("authTokenExp", Date.now() + 10 * 60 * 1000); // 10 minutos
       window.location.href = "/html/dashboard.html"; // Redirige tras login
     } catch (err) {
       console.error("Error al iniciar sesión:", err.message);
