@@ -32,9 +32,22 @@ m1
 │     └─── main.sql
 │
 └─── utilidades #Funciones auxiliares reutilizables
-      ├─── generar_qr.php
-      ├─── pdf_generator.php
-      └─── logger.php
+│     ├─── generar_qr.php
+│     ├─── pdf_generator.php
+│     └─── logger.php
+│
+├─── php
+│     ├─── auth
+│     │     └─── login.php
+│     ├─── crear_usuarios_iniciales.php
+│     └─── verify_token.php
+│
+├───── html
+│       └─── login.html
+│
+└───── js
+        └─── login.js
+
 
 └
 │
