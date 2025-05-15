@@ -1,0 +1,50 @@
+<!-- Ruta sugerida: /html/login.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión</title>
+  <script defer src="/js/login.js"></script>
+  <link rel="stylesheet" href="/css/estilos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white shadow-xl rounded-2xl p-8 w-full max-w-sm">
+    <h1 class="text-2xl font-semibold text-center text-gray-800 mb-6">Acceso al sistema</h1>
+    <form id="loginForm" class="space-y-5">
+      <div>
+        <label for="usuario" class="block text-sm font-medium text-gray-700">Usuario</label>
+        <input
+          type="text"
+          id="usuario"
+          name="usuario"
+          pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$"
+          title="Solo letras sin números ni símbolos"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+          placeholder="Ingresa tu usuario"
+          required
+        />
+      </div>
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-500"
+          placeholder="••••••••"
+          required
+        />
+      </div>
+      <div id="errorMsg" class="text-red-500 text-sm hidden">Error al iniciar sesión. Verifica tus datos.</div>
+      <button
+        type="submit"
+        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+      >
+        Iniciar sesión
+      </button>
+    </form>
+  </div>
+</body>
+</html>
