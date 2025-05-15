@@ -1,0 +1,2 @@
+<?php
+$claveJWT = 'TU_CLAVE_SECRETA_SEGURA';
