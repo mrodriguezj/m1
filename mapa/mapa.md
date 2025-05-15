@@ -16,7 +16,7 @@ m1
 │     ├─── js #archivos JavaScript
 │     └─── css #archivos de estilos
 │
-├─── autentificacion #Modulos para autenticación y seguridad
+├─── autentificacion #Modulos para autenticacion y seguridad
 │     ├─── verificar_token.php
 │     ├─── generar_token.php
 │     ├─── generar_otp.php
@@ -27,6 +27,9 @@ m1
 │     ├─── enviar_comprobante.php
 │     ├─── validar_pago.php
 │     └─── plantilla.html
+│
+├─── sql_tables #Tablas SQL
+│     └─── main.sql
 │
 └─── utilidades #Funciones auxiliares reutilizables
       ├─── generar_qr.php
