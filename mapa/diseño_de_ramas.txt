@@ -1,0 +1,52 @@
+
+Checkpoint: Flujo de desarrollo y ramas - Proyecto M1
+
+Objetivo:
+Establecer una estructura clara y segura para el desarrollo modular del sistema M1, manteniendo control y orden a través del uso de ramas Git, incluso trabajando en solitario.
+
+Ramas principales:
+- main     → Rama de producción. Contiene solo código estable y funcional.
+- develop  → Rama de integración. Aquí se fusionan los módulos ya terminados antes de subirlos a producción.
+
+Ramas por función/módulo (basadas en develop):
+
+Autenticación:
+- feature/login                → Inicio de sesión con validación JWT
+- feature/otp                  → Generación y verificación OTP
+
+Comprobantes:
+- feature/generar-provisional → Creación de comprobantes HTML provisionales
+- feature/validar-pago        → Validación y registro del estado del pago
+- feature/enviar-comprobante  → Envío de comprobantes por email o pantalla
+
+PDF y QR:
+- feature/pdf-generator        → Generación de PDFs desde plantilla HTML
+- feature/qr-generator         → Generación de códigos QR
+
+Utilidades generales:
+- feature/logger              → Registro de errores, acciones o eventos
+- feature/config-db           → Carga y validación de conexión a base de datos
+
+Frontend:
+- feature/ui-login            → Interfaz de login visual
+- feature/ui-comprobantes     → Visualización de comprobantes generados
+- feature/ui-tabla-historico  → Histórico de comprobantes
+- feature/ui-modales          → Alertas, errores, mensajes de éxito, etc.
+
+Soporte y pruebas:
+- feature/test-db-connection  → Fichero de prueba de conexión
+
+Flujo recomendado de trabajo:
+1. Crear rama feature/nombre desde develop
+2. Desarrollar y probar en local
+3. Hacer merge a develop cuando esté listo
+4. Probar en ambiente piloto con rama develop
+5. Solo lo probado y validado pasa a main
+
+Orden sugerido de desarrollo:
+1. Autenticación (login, otp)
+2. Comprobantes (generar-provisional, validar-pago, enviar-comprobante)
+3. PDF y QR
+4. Utilidades generales
+5. Frontend
+6. Soporte y pruebas
