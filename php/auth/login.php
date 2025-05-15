@@ -1,6 +1,7 @@
 <?php
 // Ruta sugerida: /php/auth/login.php
 
+require_once __DIR__ . '/clave_secreta.php';
 require_once __DIR__ . '/../../db/conexion.php';
 require_once __DIR__ . '/../../vendor/autoload.php';
 use Firebase\JWT\JWT;
@@ -53,7 +54,7 @@ try {
         'rol' => $user['rol']
     ];
 
-    $secretKey = 'TU_CLAVE_SECRETA_SEGURA'; // reemplaza con tu clave real
+    $secretKey = $claveJWT; // reemplaza con tu clave real
     $token = JWT::encode($payload, $secretKey, 'HS256');
 
     echo json_encode(['token' => $token]);
